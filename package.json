@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint --ext .tsx --ext .ts src/",
-    "format": "prettier --check ./src"
+    "format": "prettier --check ./src",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "17.0.2",
@@ -28,11 +29,16 @@
     "eslint-plugin-react": "^7.32.1",
     "husky": "^8.0.3",
     "jest": "^29.3.1",
+    "lint-staged": "^13.1.0",
     "metro-react-native-babel-preset": "^0.74.1",
     "prettier": "^2.8.3",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "lint-staged": {
+    "*.{tsx,ts}": "eslint --cache --fix",
+    "*./src": "prettier --write"
   }
 }

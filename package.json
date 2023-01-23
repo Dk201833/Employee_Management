@@ -8,8 +8,9 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint --ext .tsx --ext .ts src/",
+    "lint-staged": "lint-staged --config lint-staged.js",
     "format": "prettier --check ./src",
-    "prepare": "husky install"
+    "husky-install": "husky install"
   },
   "dependencies": {
     "react": "17.0.2",
